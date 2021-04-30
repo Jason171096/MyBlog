@@ -1,0 +1,25 @@
+:root {
+    --white: #FFFFFF;
+    --so-white: #DFDFDF;
+    --skyblue: #537895;
+    --stealblue: #09203F;
+    --gradient: linear-gradient(180deg, rgba(9,32,63,1) 0%, rgba(83,120,149,1) 100%);
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'DM Sans', sans-serif;
+}
+
+body {
+
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 210px;
+    background: var(--gradient);
+    
+}
