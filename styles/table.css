@@ -1,0 +1,11 @@
+header {
+    height: 600px;
+}
+
+header .background-img {
+    background-size: 100% 600px;
+}
+
+header h1 {
+    font-size: 7rem;
+}
