@@ -12,59 +12,47 @@ html {
 }
 
 body {
-
-}
-
-/* ----- name-container ----- */
-.name-container {
-    position: fixed;
-    width: 70px;
-    height: 50px;
-    top: 30px;
-    left: 20px;
-    font-family: 'Dancing Script', cursive;
-    color: var(--so-white);
-    font-size: 3rem;
-}
-
-/* ----- menu-container-toggle ----- */
-.menu-container {
-    position: fixed;
-    width: 50px;
-    height: 50px;
-    top: 45px;
-    left: calc(100% - 50px);
-}
-
-.menu-toggle {
-   width: 28px;
-   height: 10px;
-   top: 50px;
-   left: 50px;   
-   z-index: 1;
-   user-select: none;
-   cursor: pointer;
-}
-
-.menu-toggle div {
     width: 100%;
-    height: 2px;
-    background: var(--so-white);
-    margin: 4px auto;
-    transition: all 0.3s;
-    backface-visibility: hidden;  
+    height: auto;
 }
 
 /* ----- sidenav ----- */
 .sidenav {
     position: fixed;
+    display: flex;
+    flex-wrap: wrap;
     width: 0;
     height: 100%;
-    background: url(../images/background-toggleMenu1.jpg);
-    overflow-x: hidden;
+    background: url(../images/background-toggleMenu.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 1;
+    /* animation: 1s ease-out 1s 1 slideInLeft; */
 }
 
+.wrap {
+    margin: 0 auto;
+}
 
+.sidenav li {
+    margin-bottom: 15px;
+}
+
+.sidenav a { 
+    font-size: 4rem;
+    font-family: 'Comfortaa', cursive;
+    color: var(--so-white);
+}
+
+.sidenav a:hover {
+    color: var(--white);
+}
+
+/* ----- header ----- */
 header {
     display: flex;
     flex-wrap: wrap;
@@ -94,8 +82,71 @@ header h1 {
     transform: rotate(-25deg);
 }
 
-.section1 {
-    width: 100%;
-    height: 450px;
+/* ----- name-container ----- */
+.name-container {
+    position: fixed;
+    top: 30px;
+    left: 20px;
+    font-family: 'Dancing Script', cursive;
+    color: var(--so-white);
+    font-size: 3rem;
+    cursor: pointer;
+    z-index: 1;
 }
- 
+
+.name-container:hover {
+    color: var(--white);
+}
+
+/* ----- menu-container-toggle ----- */
+.menu-container {
+    position: fixed;
+    width: 28px;
+    height: 10px;
+    top: 45px;
+    left: calc(100% - 50px);
+    z-index: 1;
+}
+
+.menu-toggle {
+   width: 28px;
+   height: 10px;
+   top: 50px;
+   left: 50px;   
+   z-index: 1;
+   user-select: none;
+   cursor: pointer;
+}
+
+.menu-toggle .one, .two {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: var(--so-white);
+}
+
+.menu-toggle .one {
+    width: 75%;
+    left: 7px;
+}
+
+.menu-toggle .two {
+    top: 5px;
+}
+
+/* .menu-toggle:hover div {
+    background: var(--white);
+    margin: 3px auto;
+    transition: .1s;
+} */
+
+@keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+
