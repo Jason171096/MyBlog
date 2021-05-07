@@ -31,7 +31,7 @@ body {
     align-items: center;
     overflow: hidden;
     z-index: 1;
-    /* animation: 1s ease-out 1s 1 slideInLeft; */
+    transition: 1s;
 }
 
 .wrap {
@@ -50,6 +50,10 @@ body {
 
 .sidenav a:hover {
     color: var(--white);
+}
+
+.animationSideNav {
+    
 }
 
 /* ----- header ----- */
@@ -134,19 +138,5 @@ header h1 {
     top: 5px;
 }
 
-/* .menu-toggle:hover div {
-    background: var(--white);
-    margin: 3px auto;
-    transition: .1s;
-} */
-
-@keyframes slideInLeft {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
 
 
