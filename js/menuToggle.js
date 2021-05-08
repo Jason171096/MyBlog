@@ -53,13 +53,18 @@ window.onload = function () {
         const white = getComputedStyle(document.documentElement).getPropertyValue("--white");
         myToggleOne.style.setProperty("background", white);
         myToggleTwo.style.setProperty("background", white);
+        myToggleOne.style.boxShadow = `0 0 5px ${white}`
+        myToggleTwo.style.boxShadow = `0 0 5px ${white}`
         myToggle.style.transition = ".1s"
+        
     }
 
     function mouseLeave() {
         const so_white = getComputedStyle(document.documentElement).getPropertyValue("--so-white");
         myToggleOne.style.setProperty("background", so_white);
         myToggleTwo.style.setProperty("background", so_white);
+        myToggleOne.style.boxShadow = `0 0 0`
+        myToggleTwo.style.boxShadow = `0 0 0`
         myToggle.style.transition = ".1s"
     }
 }
