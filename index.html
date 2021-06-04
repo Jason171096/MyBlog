@@ -12,20 +12,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <title>Frontend Developer - Jason Martinez</title>
     <link rel="shortcut icon" href="icons/iconTitleBar.ico">
 </head>
 
 <body>
-    <div id="preLoader" class="preloader">
+    <!-- PRELOADER -->
+    <div id="preLoader" class="preloader">  
         <h1>TOUCH ME!</h1>
-        <img src="images/letter_j.png" alt="">
+        <img id="preLoaderLogo" src="images/letter_j.png" alt="">
     </div>
     <script src="js/preLoader.js"></script>
+
+    <!-- NAVBAR -->
     <nav id="mySideNav" class="sidenav">
-        <div class="wrap">
+        <div class="wrapper-sidenav">
             <div class="navigation">
                 <div class="nav-contact"></div>
                 <div class="nav-menu">
@@ -39,38 +41,85 @@
             </div>
         </div>
     </nav>
+
+    <!-- NAME -->
     <div id="myName" class="name-container">
         <p>Jason</p>
     </div>
+
+    <!-- TOGGLE -->
     <div class="menu-container">
         <div id="myToggle" class="menu-toggle">
             <div id="myToggleOne" class="one"></div>
             <div id="myToggleTwo" class="two"></div>
         </div>
     </div>
+
+    <!-- HEADER -->
     <header>
-        <div class="background-img">
+        <div class="presentation-container-header">
+            <div class="photo-container">
+                <div class="photo-container -transform"></div>
+                <img src="./images/my_photo_opt.jpg" alt="photo-profile">
+            </div>
+            <div class="logo-container">
+                <img src="./images/letter_j.png" alt="letter_j">
+            </div>
+            <div class="description-container">
+                <h1>Designer / Developer</h1>
+                <p>Create the best desing and development experiences</p>
+            </div>
         </div>
-        <h1><span>De</span>sign<span>er</span> / <span>De</span>velop<span>er</span></h1>
-        <p>Create the best desing and development experiences</p>
     </header>
-    <section class="section-help-contact">
-        <div class="border-gradient-wrap">
-            <a class="help-button-work" href="">My work <span>→</span></a>
+    <!-- SECTION SKILLS -->
+    <section class="section-recent-skills">
+        <h1>Skills</h1>
+        <div class="wrapper-skills">
+            <div class="wrapper-list">
+                <img src="./icons/code.svg" alt="">
+                <ul>
+                    <li>C#</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>SQL</li>
+                    <li>MySQL</li>
+                    <li>React</li>
+                </ul>
+            </div>
+            <div class="wrapper-list">
+                <img src="./icons/design.svg" alt="">
+                <ul>
+                    <li>Adobe XD</li>
+                </ul>
+            </div>
+            
+            <div class="wrapper-list">
+                <img src="./icons/control.svg" alt="">
+                <ul>
+                    <li>Git</li>
+                    <li>GitHub</li>
+                </ul>
+            </div>
+            
         </div>
+    </section>
+    <!-- SECTION HELP -->
+    <section class="section-help-contact">
         <div class='box-wave'>
             <div class='wave -one'></div>
             <div class='wave -two'></div>
             <div class='wave -three'></div>
         </div>
         <div class="help-contact">
-            <img class="selfie-contact" src="images/my_photo_opt.jpg" alt="">
             <h1>How can I help you?</h1>
             <p>As a freelance digital designer, I am here to make you stand out in the digital world. The combination of
                 my passion for design and your vision will ensure a great end result.</p>
             <a class="help-button-contact" href="">Contact <span>→</span></a>
         </div>
     </section>
+
+    <!-- SECTION WORK -->
     <section class="section-recent-work">
         <div class="recent-work-grid">
             <h1 class="title-work">Recent Work</h1>
