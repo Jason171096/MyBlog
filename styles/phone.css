@@ -9,6 +9,7 @@
     --gradient: linear-gradient(180deg, #13547a 0%, #80d0c7 100%);
     --gradient2: linear-gradient(180deg, #80d0c7 0%, #ff7376 100%);
     --gradient3: linear-gradient(90deg, #ff7376 0%, #030d28 70%);
+    --gradient4: linear-gradient(180deg, #121010cc 0%, #121010cc 100%);
 }
 
 html {
@@ -164,7 +165,7 @@ header {
   height: 350px;
   top: 75px;
   background: var(--stealblue);
-  max-width: 500px;
+  max-width: 350px;
   border-radius: 10px;
 }
 
@@ -261,6 +262,7 @@ header {
 }
 
 .wrapper-list {
+  max-width: 400px;
   margin: 5px;
 }
 
@@ -336,7 +338,7 @@ header {
     justify-content: center;
     width: 200px;
     height: 480px;
-    top: 15%;
+    top: 10%;
     left: 40%;
 }
 
@@ -358,13 +360,13 @@ header {
 }
 
 .section-help-contact h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin: 15px 0;
 }
 
 .section-help-contact p {
-    font-size: 1.2rem;
-    line-height: 20px;
+    font-size: 1.5rem;
+    line-height: 25px;
     margin-bottom: 10px;
 }
 
@@ -410,8 +412,11 @@ header {
 
 .grid-layout {
     display: grid;
+    grid-template: 350px 350px 350px / 1fr;
+    max-width: 300px;
     width: 100%;
     height: 650px;
+    margin: 0 auto;
 }
 
 .grid-work1, .grid-work2, .grid-work3 {
@@ -470,10 +475,14 @@ header {
     line-height: 20px;
 }
 
+.grid-container img {
+  border-radius: 10px;
+}
+
 /* ----- FOOTER ----- */
 footer {
   width: 100%;
-  height: 600px;
+  height: 500px;
   background: var(--so-white);
 }
 
@@ -488,8 +497,8 @@ footer {
 
 .wrapper-footer h3{
   margin: 15px;
-  font-size: 2rem;
-  opacity: .6;
+  font-size: 1.5rem;
+  opacity: .5;
 }
 
 .wrapper-footer h2 {
@@ -504,8 +513,29 @@ footer {
 }
 
 .block-footer {
-  background: url(../images/footer_opt.jpg);
-  
+  width: 100%;
+  height: 200px;
+  background-image: var(--gradient4), url(../images/footer_opt.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.block-footer a {
+  margin: 10px;
+  font-size: 2rem;
+  color: var(--so-white);
+}
+
+.block-footer p {
+  margin: 10px;
+  font-size: 1.5rem;
+  color: var(--so-white);
+  opacity: .5;
 }
 
 
