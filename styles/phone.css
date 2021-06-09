@@ -8,7 +8,7 @@
     --mightgreen: #003333;
     --gradient: linear-gradient(180deg, #13547a 0%, #80d0c7 100%);
     --gradient2: linear-gradient(180deg, #80d0c7 0%, #ff7376 100%);
-    --gradient3: linear-gradient(90deg, #ff7376 0%, #030d28 70%);
+    --gradient3: linear-gradient(180deg, #ff7376 0%, #030d28 70%);
     --gradient4: linear-gradient(180deg, #121010cc 0%, #121010cc 100%);
 }
 
@@ -284,13 +284,6 @@ header {
   border: 1px solid var(--stealblue);
 }
 
-.wrapper-list ul > li:hover {
-  background: #003333;
-  transition: .5s;
-}
-
-
-
 /* ----- SECTION-HELP ----- */
 .section-help-contact {
     position: relative;
@@ -342,50 +335,48 @@ header {
     left: 40%;
 }
 
-.help-button-work {
-    position: absolute;
-    top: -25px;
-    left: calc(50% - 60px);
-    color: var(--white);
-    font-family: 'Comfortaa', cursive;
-    padding: 15px;
-    font-size: 1.6rem;
-    border-radius: 50px;
-    background: var(--mightgreen);
-}
-
-.help-button-work:hover {
-    color: var(--white);
-    text-shadow: 0 0 5px var(--white);
-}
-
 .section-help-contact h1 {
     font-size: 3rem;
-    margin: 15px 0;
+    margin: 25px 0;
 }
 
 .section-help-contact p {
     font-size: 1.5rem;
     line-height: 25px;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
 }
 
-.section-help-contact .help-button-contact {
-    width: 120px;
-    color: var(--white);
-    font-family: 'Comfortaa', cursive;
-    align-self: center;
-    padding: 15px;
-    font-size: 1.6rem;
-    border-radius: 50px;
-    background: var(--mightgreen);
+.help-button-contact:hover, .footer-button:hover {
+  color: var(--so-white)
 }
 
-.section-help-contact a:hover {
-    color: var(--white);
-    text-shadow: 0 0 5px var(--white);
+.help-button-contact, .footer-button {
+  background: var(--mightgreen);
+  border-radius: 10px;
+  color: var(--black);
+  height: 50px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 4px;
+  position: relative;
+  text-decoration: none;
+  width: 120px;
 }
 
+.help-button-contact .help-button-span, .footer-button .footer-span {
+  align-items: center;
+  background: var(--so-white);
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+
+.help-button-contact:hover .help-button-span, .footer-button:hover .footer-span {
+  background: transparent;
+}
 
 /* ----- SECTION-RECENT-WORK ----- */
 .section-recent-work {
@@ -450,19 +441,12 @@ header {
     transition: all .5s ease;
 }
 
-.grid-work1:hover:after, .grid-work2:hover:after, .grid-work3:hover:after {
-    left: auto;
-    right: 0;
-    width: 100%;
-}
-
 .grid-container {
     width: 100%;
     height: auto;
     padding: 0 10px;
     text-align: center;
     color: var(--white);
-
 }
 
 .grid-container h1 {
@@ -502,7 +486,7 @@ footer {
 }
 
 .wrapper-footer h2 {
-  margin: 15px;
+  margin: 25px;
   font-size: 3rem;
 }
 

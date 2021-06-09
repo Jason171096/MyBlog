@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/phone.css">
     <link rel="stylesheet" href="styles/table.css" media="(min-width: 560px)">
-    <link rel="stylesheet" href="styles/media-query720.css" media="(min-width: 720px)">
+    <link rel="stylesheet" href="styles/desktop.css" media="(min-width: 940px)">
     <link rel="stylesheet" href="" media="">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@500&display=swap" rel="stylesheet">
@@ -57,15 +57,15 @@
     </div>
 
     <div class="social-container">
-        <a class="github" href=""></a>
-        <a class="codepen" href="" ></a>
-        <a class="linkedin" href="" ></a>
-        <a class="instagram" href="" ></a>
+        <a class="github" href="https://github.com/Jason171096" target="_blank"></a>
+        <a class="codepen" href="https://codepen.io/jason171096" target="_blank"></a>
+        <a class="linkedin" href="https://www.linkedin.com/in/jm-jason-martinez" target="_blank"></a>
+        <a class="instagram" href="https://www.instagram.com/bboyace10" target="_blank"></a>
     </div>
 
     <!-- HEADER -->
     <header>
-        <div class="presentation-container-header">
+        <div class="presentation-container-header" data-tilt data-tilt-max="25" data-tilt-speed="500" data-tilt-perspective="500" data-tilt-reverse="true" data-tilt-scale="1.05">
             <div class="photo-container">
                 <div class="photo-container -transform"></div>
                 <img src="./images/my_photo_opt.jpg" alt="photo-profile">
@@ -126,7 +126,7 @@
             <h1>How can I help you?</h1>
             <p>As a freelance digital designer, I am here to make you stand out in the digital world. The combination of
                 my passion for design and your vision will ensure a great end result.</p>
-            <a class="help-button-contact" href="">Contact <span>→</span></a>
+            <a class="help-button-contact" href=""><span class="help-button-span">Contact</span></a>
         </div>
     </section>
 
@@ -134,7 +134,6 @@
     <section class="section-recent-work">
         <div class="recent-work-grid">
             <h1 class="title-work">Recent Work</h1>
-            <div class="square"></div>
             <div class="grid-layout">
                 <div class="grid-work1">
                     <div class="grid-container">
@@ -146,8 +145,7 @@
                 <div class="grid-work2">
                     <div class="grid-container">
                     <h1>Dolla</h1>
-                    <p>Dolla is a page made in the React Native library, it offers micro-transactions in an easy an
-                        secure way.</p>
+                    <p>Dolla is a page made in the React Native library, it offers micro-transactions in an easy an secure way.</p>
                     <img src="images/dolla_opt.png" alt="">
                     </div>
                 </div>
@@ -165,6 +163,7 @@
         <div class="wrapper-footer">
             <h3>DO YOU LIKE MY WORK?</h3>
             <h2>Let's <span>work</span> together!</h2>
+            <a class="footer-button" href=""><span class="footer-span">Contact</span></a>
         </div>
         <div class="block-footer">
             <a href="">Jason</a>
@@ -173,6 +172,8 @@
     </footer>
 
     <script src="js/menuToggle.js"></script>
+    <script src="js/recentWork.js"></script>
+    <script type="text/javascript" src="js/vanillaTilt.js"></script>
 </body>
 
 </html>
