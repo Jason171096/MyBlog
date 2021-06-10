@@ -20,6 +20,31 @@ html {
 body {
     width: 100%;
     height: auto;
+    overflow: hidden;
+}
+
+/* ----- PRELOADER ----- */
+.preloader {
+  align-items: center;
+  background: #030d28;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  transition: opacity 0.3s linear;
+  cursor: pointer;
+  flex-direction: column;
+}
+
+.preloader h1 {
+  background: -webkit-linear-gradient(300deg, #01e2b6 0%, #ff7376 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3rem;
 }
 
 /* ----- SIDENAV ----- */
