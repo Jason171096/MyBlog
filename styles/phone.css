@@ -20,37 +20,7 @@ html {
 body {
     width: 100%;
     height: auto;
-    overflow: hidden;
 }
-
-.preloader {
-    align-items: center;
-    background: #030d28;
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-    transition: opacity 0.3s linear;
-    cursor: pointer;
-    flex-direction: column;
-}
-
-.preloader h1 {
-    background: -webkit-linear-gradient(300deg, #01e2b6 0%, #ff7376 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 3rem;
-}
-
-.preloader img {
-    /* animation: shake-bottom 3.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite; */
-    /* animation: slide .45s cubic-bezier(0.470, 0.000, 0.745, 0.715) infinite; */
-}
-
 
 /* ----- SIDENAV ----- */
 .sidenav {
@@ -282,6 +252,7 @@ header {
   padding: 15px;
   border-radius: 10px;
   border: 1px solid var(--stealblue);
+  /* animation: scale-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite; */
 }
 
 /* ----- SECTION-HELP ----- */
@@ -480,7 +451,6 @@ footer {
 }
 
 .wrapper-footer h3{
-  margin: 15px;
   font-size: 1.5rem;
   opacity: .5;
 }
@@ -521,9 +491,6 @@ footer {
   color: var(--so-white);
   opacity: .5;
 }
-
-
-
 
 @keyframes rotate {
   0% {
@@ -573,11 +540,17 @@ footer {
     }
   }
 
-  @keyframes slide {
+  @keyframes slide-center {
     0% {
-      transform: translateZ(0);
+      transform: perspective(500px) translateZ(300px);
     }
     100% {
-      transform: translateZ(-400px);
+      transform: perspective(500px) translateZ(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .animation-slide-center {
+      animation: slide-center 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     }
   }
