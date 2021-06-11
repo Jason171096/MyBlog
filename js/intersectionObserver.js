@@ -1,29 +1,35 @@
 let options = {
-    root: null, // relative to document viewport 
-    rootMargin: '100px', // margin around root. Values are similar to css property. Unitless values not allowed
-    threshold: 1 // visible amount of item shown in relation to root
+    root: null,  //Root the viewport
+    rootMargin: '50px', //Margin the root
+    threshold: 1 //Visibility
 };
    
-function onChange(changes) {
+function onChangeList(changes) {
     changes.forEach(change => {
-        if (change.isIntersecting) {
+        if (change.isIntersecting) { //Si es intersectado le añade la clase
             change.target.classList.add('animation-slide-center')
+            console.log("LIST")
         }
     });
 }
 
-let observer = new IntersectionObserver(onChange, options)
+function onChangeCard(changes) {
+    changes.forEach(change => {
+        if (change.isIntersecting) { //Si es intersectado le añade la clase
+            change.target.classList.add('animation-slide-elliptic')
+            console.log("CARD")
+        }
+    });
+}
+
+let observer = new IntersectionObserver(onChangeList, options)
+
+let observers = new IntersectionObserver(onChangeCard, options)
 
 let list  = document.querySelectorAll(".list-skills")
 
-list.forEach(entries => observer.observe(entries))
+list.forEach(entries => observer.observe(entries)) //Observe the list 
 
-// const observer = new IntersectionObserver(entries => {
-//     entries.forEach(entry => {
-//         if(entry.isIntersecting) {
-//             entry.target.classList.add('animation-scale-in-center')
-//         }
-//     })
-// })
+let card  = document.querySelectorAll(".grid-work")
 
-// observer.observe(document.querySelectorAll('.list-skills'))
+card.forEach(entries => observer.observe(entries)) //Observe the card 
