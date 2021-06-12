@@ -1,3 +1,28 @@
+.nav-contact {
+    display: block;
+    justify-content: flex-start;
+    text-align: start;
+  }
+  
+  .nav-contact img {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+  }
+  
+  .nav-contact h3 {
+    font-size: 2rem;
+    color: var(--so-white);
+    margin: 20px 0;
+  }
+  
+  .nav-contact p {
+    font-size: 1.6rem;
+    color: var(--so-white);
+    margin: 15px 0;
+  }
+
+
 .logo-container {
     top: 25%;
 }

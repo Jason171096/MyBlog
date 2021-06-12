@@ -1,6 +1,12 @@
-let options = {
+let optionsList = {
     root: null,  //Root the viewport
     rootMargin: '50px', //Margin the root
+    threshold: 1 //Visibility
+};
+
+let optionsCard = {
+    root: null,  //Root the viewport
+    rootMargin: '300px', //Margin the root
     threshold: 1 //Visibility
 };
    
@@ -8,7 +14,6 @@ function onChangeList(changes) {
     changes.forEach(change => {
         if (change.isIntersecting) { //Si es intersectado le añade la clase
             change.target.classList.add('animation-slide-center')
-            console.log("LIST")
         }
     });
 }
@@ -16,20 +21,19 @@ function onChangeList(changes) {
 function onChangeCard(changes) {
     changes.forEach(change => {
         if (change.isIntersecting) { //Si es intersectado le añade la clase
-            change.target.classList.add('animation-slide-elliptic')
-            console.log("CARD")
+            change.target.classList.add('animation-scale-center')
         }
     });
 }
 
-let observer = new IntersectionObserver(onChangeList, options)
+let observerList = new IntersectionObserver(onChangeList, optionsList)
 
-let observers = new IntersectionObserver(onChangeCard, options)
+let observerCard = new IntersectionObserver(onChangeCard, optionsCard)
 
-let list  = document.querySelectorAll(".list-skills")
+let lists = document.querySelectorAll(".list-skills")
 
-list.forEach(entries => observer.observe(entries)) //Observe the list 
+lists.forEach(entries => observerList.observe(entries)) //Observe the list 
 
-let card  = document.querySelectorAll(".grid-work")
+let cards = document.querySelectorAll(".grid-work")
 
-card.forEach(entries => observer.observe(entries)) //Observe the card 
+cards.forEach(entries => observerCard.observe(entries)) //Observe the card 
