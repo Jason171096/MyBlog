@@ -31,7 +31,7 @@ window.onload = function () {
   }
 
   const changeTagText = () => {
-    tag.innerText = "TODO LISTO!"
+    tag.innerText = "READY TO START!"
   }
 
   function load() {

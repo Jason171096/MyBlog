@@ -3,6 +3,7 @@ const myToggleOne = document.getElementById("myToggleOne");
 const myToggleTwo = document.getElementById("myToggleTwo");
 const mySideNav = document.getElementById("mySideNav");
 const myToggle = document.getElementById("myToggle");
+const body = document.querySelector("body")
 
 document.getElementById("myName").onclick = function () { gohome() };
 
@@ -24,6 +25,7 @@ function toggleMenu() {
 }
 
 function openNav() {
+    body.style.overflow = "hidden"
     mySideNav.style.width = "100%"
     myToggleOne.style.width = "100%"
     myToggleOne.style.left = "0"
@@ -36,7 +38,8 @@ function openNav() {
 }
 
 function closeNav() {
-    document.getElementById("mySideNav").style.width = "0";
+    body.style.overflow = "auto"
+    mySideNav.style.width = "0";
     myToggleOne.style.width = "75%"
     myToggleOne.style.left = "7px"
     myToggleTwo.style.top = "5px"
@@ -44,7 +47,6 @@ function closeNav() {
     myToggleOne.style.transition = "transform 1s"
     myToggleTwo.style.transform = "rotate(0deg)"
     myToggleTwo.style.transition = "transform 1s"
-
     toggleActive = false
 }
 

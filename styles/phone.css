@@ -93,7 +93,7 @@ body {
 
 .nav-menu {
   justify-content: flex-end;
-  text-align: end;
+  text-align: start;
 }
 
 .sidenav a {
@@ -166,6 +166,41 @@ body {
 
 .menu-toggle .two {
     top: 5px;
+}
+
+/* ----- SOCIAL ----- */
+.social-container {
+  position: fixed;
+  width: 20px;
+  height: 160px;
+  left: calc(100% - 50px);
+  top: 40%;
+  z-index: 1;
+  mix-blend-mode: difference;
+}
+
+.github {
+  background: url(../icons/github.svg) center center no-repeat;
+}
+
+.codepen {
+  background: url(../icons/codepen.svg) center center no-repeat;
+}
+
+.linkedin {
+  background: url(../icons/linkedin.svg) center center no-repeat;
+}
+
+.instagram {
+  background: url(../icons/instagram.svg) center center no-repeat;
+}
+
+.github, .codepen, .linkedin, .instagram {
+  cursor: pointer;
+  float: right;
+  margin: 10px 0;
+  padding: 10px;
+  background-size: cover;
 }
 
 /* ----- HEADER ----- */
