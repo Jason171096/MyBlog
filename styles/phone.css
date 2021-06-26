@@ -210,7 +210,7 @@ header {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 600px;
+    height: 100vh;
     background: var(--gradient);
     /* animation: bg-pan-left 8s both; */
 }
