@@ -1,3 +1,7 @@
+header {
+    height: 100vh;
+}
+
 .description-container h1 {
     letter-spacing: 0px;
 }
